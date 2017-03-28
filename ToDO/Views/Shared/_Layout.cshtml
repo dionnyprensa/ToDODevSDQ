@@ -1,0 +1,91 @@
+﻿@using Microsoft.AspNet.Identity
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>@ViewBag.Title - ToDO</title>
+    <link href="~/Content/materialize.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="~/Content/Site.css" rel="stylesheet" />
+    @RenderSection("styles", false)
+</head>
+<body>
+    <div class="navbar-fixed">
+        <nav class="light-blue darken-2">
+            <div class="nav-wrapper">
+                <a href="@Url.Action("Index", "Home")" class="brand-logo">ToDO DEVs<b>SDQ</b> </a>
+                @*@Html.ActionLink("Developers SDQ", "Index", "Home", htmlAttributes: new { @class = "brand-logo" })*@
+                <a href="#" data-activates="mobile" class="button-collapse"><i class="material-icons">menu</i></a>
+
+                @if (User.Identity.IsAuthenticated)
+                {
+                    <ul class="right hide-on-med-and-down">
+                        <li>
+                            <a class="btn waves-effect btn-flat light-blue darken-1" href="@Url.Action("Index", "Task")">TAREAS</a>
+                        </li>
+                        <li>
+                            <a class="btn waves-effect btn-flat light-blue darken-1" href="@Url.Action("Index", "Users")">
+                                @User.Identity.GetUserName()
+                                @*<i class="material-icons">perm_identity</i>*@
+                            </a>
+                        </li>
+                        <li>
+                            <a class="btn waves-effect btn-flat light-blue darken-1" href="@Url.Action("LogOut", "Users")">
+                                Salir
+                                @*<i class="material-icons">settings_power</i>*@
+                            </a>
+                        </li>
+                    </ul>
+
+                    <ul class="side-nav" id="mobile">
+                        <li>
+                            <a class="btn waves-effect btn-flat light-blue darken-1" href="@Url.Action("Index", "Task")">
+                                Tareas
+                                @*<i class="material-icons right">list</i>*@
+                            </a>
+                        </li>
+                        <li>
+                            <a class="btn waves-effect btn-flat light-blue darken-1" href="@Url.Action("Index", "Users")">
+                                @User.Identity.GetUserName()
+                                @*<i class="material-icons right">perm_identity</i>*@
+                            </a>
+                        </li>
+                        <li>
+                            <a class="btn waves-effect btn-flat light-blue darken-1" href="@Url.Action("LogOut", "Users")">
+                                Salir
+                                @*<i class="material-icons right">settings_power</i>*@
+                            </a>
+                        </li>
+                    </ul>
+                }
+                else
+                {
+                    <ul class="right hide-on-med-and-down">
+                        <li>
+                            <a class="btn waves-effect btn-flat light-blue darken-1" href="@Url.Action("Register", "Users")">
+                                Registrate
+                            </a>
+                        </li>
+                    </ul>
+
+                    <ul class="side-nav" id="mobile">
+                        <li>
+                            <a class="btn waves-effect btn-flat light-blue darken-1" href="@Url.Action("Register", "Users")">
+                                Registrate
+                                @*<i class="material-icons">perm_identity</i>*@
+                            </a>
+                        </li>
+                    </ul>
+                }
+            </div>
+        </nav>
+    </div>
+    @RenderBody()
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script src="~/Scripts/materialize.min.js"></script>
+    @RenderSection("scripts", false)
+    <script>function back() { window.history.back(); }</script>
+</body>
+</html>

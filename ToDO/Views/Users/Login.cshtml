@@ -1,0 +1,59 @@
+﻿@model ToDO.Models.LoginViewModel
+@{
+    ViewBag.Title = "Login";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container">
+    <div class="row">
+        <div class="col s12 m8 l6 offset-m2 offset-l3">
+            <h5 class="blue-text text-darken-2">Iniciar sesión</h5>
+        </div>
+
+        @using (Html.BeginForm("Login", "Users", new { ViewBag.returnUrl }, FormMethod.Post, new {/* @class = "" */}))
+        {
+            @Html.AntiForgeryToken()
+            <div class="row">
+                <div class="col s12 m8 l6 offset-l3 offset-m2 input-field">
+                    <i class="material-icons prefix blue-text text-darken-2">assignment_ind</i>
+                    @Html.TextBoxFor(x => x.UserName, new { @class = "", placeholder = "Usuario", required = "required" })
+                    @Html.ValidationMessageFor(m => m.UserName, "", new { @class = "red-text text-darken-2" })
+                    @*<label for="email" data-error="Error" data-success="Correcto">UserName</label>*@
+                </div>
+            </div>
+            <div class="row">
+
+                <div class="col s12 m8 l6 offset-l3 offset-m2 input-field">
+                    <i class="material-icons prefix blue-text text-darken-2">https</i>
+                    @Html.PasswordFor(x => x.Password, new { @class = "", placeholder = "Clave" })
+                    @Html.ValidationMessageFor(m => m.Password, "", new { @class = "red-text text-darken-2", required = "required" })
+                    @*<label for="email" data-error="Error" data-success="Correcto">Password</label>*@
+                </div>
+            </div>
+            <div class="row">
+                <div class="col s12 m8 l6 offset-l3 offset-m2 input-field">
+                    <div class="col s8 m8 l8">
+                        @*@Html.CheckBoxFor(x => x.RememberMe, new {@class="filled-in checkbox-blue", @checked= "checked" })*@
+                        <input type="checkbox" class="filled-in checkbox-blue" id="RememberMe" name="RememberMe" checked="checked" Value="true" />
+                        <label for="RememberMe">Recordar</label>
+                    </div>
+                    <div class="col s4 m4 l4">
+                        <button type="submit" class="btn btn-large btn-floating waves-effect waves-light blue darken-3">
+                            <i class="material-icons right">input</i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</div>
+
+@section scripts{
+    <script>
+        $("#RememberMe").on('change',
+            function (e) {
+                console.log(console.log(e['currentTarget']['checked']));
+                $("#RememberMe").attr('value', e['currentTarget']['checked']);
+            });
+    </script>
+}

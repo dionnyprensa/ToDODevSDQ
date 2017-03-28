@@ -1,0 +1,120 @@
+
+.info{
+	background: #f7f7f7;
+	padding: 20px 0 1px 0;
+	font-size: 16px;
+}
+
+.info span{
+	font-size: 20px;
+}
+
+.info p{
+	color: #888;
+	margin: 0;
+}
+
+.info span{
+	color:#9bc53d
+}
+
+[type="checkbox"]:checked+label:before {
+    border-right: 2px solid #9bc53d;
+    border-bottom: 2px solid #9bc53d;
+}
+
+.task-list label{
+	color: #333;
+	font-size: 16px;
+}
+
+.task-list ul{
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	margin-top: 20px;
+}
+
+
+.task-list ul li{
+    border-left: 4px solid #F44336;
+    padding: 20px 0;
+    border-bottom: 1px solid #f2f2f2;
+    border-top: 1px solid #f2f2f2;
+    margin-bottom: 20px;
+}
+
+#completed li{
+    border-left: 4px solid #9bc53d !important;
+}
+
+#completed label{
+	color: #888 !important;
+	text-decoration: line-through;
+}
+
+.task-list .row{
+	margin: 0;
+}
+
+.add-task{
+	margin-top: 30px;
+}
+
+.modal h4{
+	margin-bottom: 30px !important;
+	text-align: center;
+}
+
+.finish label{
+	color: #888 !important;
+}
+
+.task-title{
+	display: inline-block;
+}
+
+.hour{
+	float: right;
+}
+
+hr.style {
+    border: 0;
+    height: 1px;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.20), rgba(0, 0, 0, 0));
+}
+
+input:not([type]):focus:not([readonly]), input[type=text]:focus:not([readonly]), input[type=password]:focus:not([readonly]), input[type=email]:focus:not([readonly]), input[type=url]:focus:not([readonly]), input[type=time]:focus:not([readonly]), input[type=date]:focus:not([readonly]), input[type=datetime]:focus:not([readonly]), input[type=datetime-local]:focus:not([readonly]), input[type=tel]:focus:not([readonly]), input[type=number]:focus:not([readonly]), input[type=search]:focus:not([readonly]), textarea.materialize-textarea:focus:not([readonly]) {
+    border-bottom: 1px solid #9bc53d;
+    box-shadow: 0 1px 0 0 #9bc53d;
+}
+
+input:not([type]):focus:not([readonly])+label, input[type=text]:focus:not([readonly])+label, input[type=password]:focus:not([readonly])+label, input[type=email]:focus:not([readonly])+label, input[type=url]:focus:not([readonly])+label, input[type=time]:focus:not([readonly])+label, input[type=date]:focus:not([readonly])+label, input[type=datetime]:focus:not([readonly])+label, input[type=datetime-local]:focus:not([readonly])+label, input[type=tel]:focus:not([readonly])+label, input[type=number]:focus:not([readonly])+label, input[type=search]:focus:not([readonly])+label, textarea.materialize-textarea:focus:not([readonly])+label {
+    color: #9bc53d;
+}
+
+.modal-action{
+	color: #fff;
+	background: #9bc53d
+}
+
+.picker__date-display {
+    background-color: #9bc53d;
+}
+
+.clockpicker-display, .clockpicker-span-am-pm {
+    color: #658028;
+}
+
+.clockpicker-canvas line {
+    stroke: #9bc53d;
+}
+
+.clockpicker-tick.active, .clockpicker-tick:hover, .btn-floating.btn-flat.active{
+    background-color:#9bc53d;
+    color: #fff
+}
+
+.clockpicker-canvas-bg-trans , .clockpicker-canvas-bg{
+    fill: rgba(155,197,61,0.5);
+}

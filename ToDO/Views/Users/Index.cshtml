@@ -1,0 +1,56 @@
+﻿@model ToDO.Models.UserViewModel
+
+@{
+    ViewBag.Title = "Detalle Usuario";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container">
+    <div class="row">
+
+        <div class="col s12 m8 l6 offset-m2 offset-l3 info">
+            <h5 class="blue-text text-darken-2">Detalles del usuario</h5>
+        </div>
+
+        @using (Html.BeginForm("Update", "Users", FormMethod.Post, new {/* @class = "" */}))
+        {
+            @Html.AntiForgeryToken()
+            @Html.ValidationSummary()
+            <div class="row">
+                <div class="col s12 m8 l6 offset-l3 offset-m2 input-field">
+                    <i class="material-icons prefix blue-text text-darken-2">perm_contact_calendar</i>
+                    @Html.TextBoxFor(x => x.FirstName, new { @class = "", placeholder = "Nombre", required = "required" })
+                    @Html.ValidationMessageFor(m => m.FirstName, "", new { @class = "red-text text-darken-2" })
+                    @*<label for="email" data-error="Error" data-success="Correcto">Password</label>*@
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col s12 m8 l6 offset-l3 offset-m2 input-field">
+                    <i class="material-icons prefix blue-text text-darken-2">recent_actors</i>
+                    @Html.TextBoxFor(x => x.LastName, new { @class = "", placeholder = "Apellido", required = "required" })
+                    @Html.ValidationMessageFor(m => m.LastName, "", new { @class = "red-text text-darken-2" })
+                    @*<label for="email" data-error="Error" data-success="Correcto">Password</label>*@
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col s12 m8 l6 offset-l3 offset-m2 input-field">
+                    <i class="material-icons prefix blue-text text-darken-2">assignment_ind</i>
+                    @Html.TextBoxFor(x => x.UserName, new { @class = "", placeholder = "Usuario", required = "required" })
+                    @Html.ValidationMessageFor(m => m.UserName, "", new { @class = "red-text text-darken-2" })
+                    @*<label for="email" data-error="Error" data-success="Correcto">UserName</label>*@
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col s6 m4 l3 offset-m2 offset-l3">
+                    @Html.ActionLink("Cambiar Clave", "ChangePassword", "Users", new { @class = "btn waves-effect blue darken-3" })
+                </div>
+                <div class="col s6 m4 l3">
+                    <button type="submit" class="btn waves-effect blue darken-3"> Actualizar Datos</button>
+                </div>
+            </div>
+        }
+    </div>
+</div>

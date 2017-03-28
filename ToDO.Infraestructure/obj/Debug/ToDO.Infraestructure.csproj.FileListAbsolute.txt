@@ -1,0 +1,16 @@
+E:\D\Desarrollo\Proyectos\ .NET\ToDOCharla\ToDO.Infraestructure\bin\Debug\ToDO.Infraestructure.dll.config
+E:\D\Desarrollo\Proyectos\ .NET\ToDOCharla\ToDO.Infraestructure\bin\Debug\ToDO.Infraestructure.dll
+E:\D\Desarrollo\Proyectos\ .NET\ToDOCharla\ToDO.Infraestructure\bin\Debug\ToDO.Infraestructure.pdb
+E:\D\Desarrollo\Proyectos\ .NET\ToDOCharla\ToDO.Infraestructure\bin\Debug\EntityFramework.dll
+E:\D\Desarrollo\Proyectos\ .NET\ToDOCharla\ToDO.Infraestructure\bin\Debug\EntityFramework.SqlServer.dll
+E:\D\Desarrollo\Proyectos\ .NET\ToDOCharla\ToDO.Infraestructure\bin\Debug\Microsoft.AspNet.Identity.Core.dll
+E:\D\Desarrollo\Proyectos\ .NET\ToDOCharla\ToDO.Infraestructure\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.dll
+E:\D\Desarrollo\Proyectos\ .NET\ToDOCharla\ToDO.Infraestructure\bin\Debug\ToDO.Domain.dll
+E:\D\Desarrollo\Proyectos\ .NET\ToDOCharla\ToDO.Infraestructure\bin\Debug\ToDO.Domain.pdb
+E:\D\Desarrollo\Proyectos\ .NET\ToDOCharla\ToDO.Infraestructure\bin\Debug\EntityFramework.xml
+E:\D\Desarrollo\Proyectos\ .NET\ToDOCharla\ToDO.Infraestructure\bin\Debug\EntityFramework.SqlServer.xml
+E:\D\Desarrollo\Proyectos\ .NET\ToDOCharla\ToDO.Infraestructure\bin\Debug\Microsoft.AspNet.Identity.Core.xml
+E:\D\Desarrollo\Proyectos\ .NET\ToDOCharla\ToDO.Infraestructure\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.xml
+E:\D\Desarrollo\Proyectos\ .NET\ToDOCharla\ToDO.Infraestructure\obj\Debug\ToDO.Infraestructure.dll
+E:\D\Desarrollo\Proyectos\ .NET\ToDOCharla\ToDO.Infraestructure\obj\Debug\ToDO.Infraestructure.pdb
+E:\D\Desarrollo\Proyectos\ .NET\ToDOCharla\ToDO.Infraestructure\obj\Debug\ToDO.Infraestructure.csprojResolveAssemblyReference.cache

@@ -1,0 +1,4 @@
+E:\D\Desarrollo\Proyectos\ .NET\ToDOCharla\ToDO.Domain\bin\Debug\ToDO.Domain.dll
+E:\D\Desarrollo\Proyectos\ .NET\ToDOCharla\ToDO.Domain\bin\Debug\ToDO.Domain.pdb
+E:\D\Desarrollo\Proyectos\ .NET\ToDOCharla\ToDO.Domain\obj\Debug\ToDO.Domain.dll
+E:\D\Desarrollo\Proyectos\ .NET\ToDOCharla\ToDO.Domain\obj\Debug\ToDO.Domain.pdb

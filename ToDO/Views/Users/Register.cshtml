@@ -1,0 +1,68 @@
+﻿@model ToDO.Models.UserViewModel
+
+@{
+    ViewBag.Title = "Register";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container">
+    <div class="row">
+        <div class="col s12 m8 l6 offset-m2 offset-l3 info">
+            <h5 class="blue-text text-darken-2">Registro</h5>
+        </div>
+
+        @using (Html.BeginForm("Register", "Users", new { ViewBag.returnUrl }, FormMethod.Post, new { /* @class = "" */ }))
+        {
+            @Html.AntiForgeryToken()
+            @Html.ValidationSummary()
+            <div class="row">
+                <div class="col s12 m8 l6 offset-l3 offset-m2 input-field">
+                    <i class="material-icons prefix blue-text text-darken-2">perm_contact_calendar</i>
+                    @Html.TextBoxFor(x => x.FirstName, new { @class = "", placeholder = "Nombre", required = "required" })
+                    @Html.ValidationMessageFor(m => m.FirstName, "", new { @class = "red-text text-darken-2" })
+                    @*<label for="email" data-error="Error" data-success="Correcto">Password</label>*@
+                </div>
+            </div>
+            <div class="row">
+                <div class="col s12 m8 l6 offset-l3 offset-m2 input-field">
+                    <i class="material-icons prefix blue-text text-darken-2">recent_actors</i>
+                    @Html.TextBoxFor(x => x.LastName, new { @class = "", placeholder = "Apellido", required = "required" })
+                    @Html.ValidationMessageFor(m => m.LastName, "", new { @class = "red-text text-darken-2" })
+                    @*<label for="email" data-error="Error" data-success="Correcto">Password</label>*@
+                </div>
+            </div>
+            <div class="row">
+                <div class="col s12 m8 l6 offset-l3 offset-m2 input-field">
+                    <i class="material-icons prefix blue-text text-darken-2">assignment_ind</i>
+                    @Html.TextBoxFor(x => x.UserName, new { @class = "", placeholder = "Usuario", required = "requeried" })
+                    @Html.ValidationMessageFor(m => m.UserName, "", new { @class = "red-text text-darken-2" })
+                    @*<label for="email" data-error="Error" data-success="Correcto">UserName</label>*@
+                </div>
+            </div>
+            <div class="row">
+                @Html.ValidationMessageFor(m => m.Password, "", new { @class = "red-text text-darken-2" })
+                <div class="col s12 m8 l6 offset-l3 offset-m2 input-field">
+                    <i class="material-icons prefix blue-text text-darken-2">https</i>
+                    @Html.PasswordFor(x => x.Password, new { @class = "", placeholder = "Clave", required = "requeried" })
+                    @*<label for="email" data-error="Error" data-success="Correcto">Password</label>*@
+                </div>
+            </div>
+            <div class="row">
+                <div class="col s6 m2 l2 offset-s6 offset-m7 offset-l7">
+                    <button type="submit" class="btn waves-effect blue darken-3"> Registrar </button>
+                </div>
+            </div>
+        }
+    </div>
+</div>
+
+@section scripts{
+
+    <script>
+        $("#RememberMe").on('change',
+            function (e) {
+                console.log(console.log(e['currentTarget']['checked']));
+                $("#RememberMe").attr('value', e['currentTarget']['checked']);
+            });
+    </script>
+}

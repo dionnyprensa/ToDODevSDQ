@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<title>ToDo</title>
+	<link rel="stylesheet" href="css/materialize.min.css">
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdn.rawgit.com/chingyawhao/materialize-clockpicker/master/dist/css/materialize.clockpicker.css">
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+	<div class="info">
+		<div class="container">
+			<div class="row">
+				<div class="col s6">
+					<span><strong><span id="day"></span>,</strong> <span id="date"></span></span>
+					<p id="month"></p>
+				</div>
+				<div class="col s6 right-align">
+					<span><span id="task_numberOne">0</span>/<span id="task_number">0</span></span>
+					<p>Task</p>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="task-list">
+		<ul id="todo"></ul>
+		<hr class="style">
+		<ul id="completed"></ul>
+	</div>
+	<div class="add-task center-align">
+		<a class="btn-floating btn-large waves-effect waves-light modal-trigger red" href="#modal1"><i class="material-icons">add</i></a>
+	</div>
+
+ 	<!-- Modal Structure -->
+	 <div id="modal1" class="modal modal-fixed-footer">
+	    <div class="modal-content">
+	     <h4>Add taks to list</h4>
+	     <div class="input-field">
+	         <input id="task_name" type="text" length="30" maxlength="30">
+	         <label for="task_name">Task name</label>
+	      </div>
+	      <div class="input-field">
+             <label for="task_time">Task time</label>
+             <input id="task_time" class="timepicker" type="time">
+         </div>
+	   </div>
+	    <div class="modal-footer">
+	      <a href="" id="add_task" class="modal-action modal-close waves-effect waves-green btn-flat ">Add task</a>
+	    </div>
+	  </div>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+	<script src="js/materialize.min.js"></script>
+	<script src="js/script.js"></script>
+	<script src="https://cdn.rawgit.com/chingyawhao/materialize-clockpicker/master/dist/js/materialize.clockpicker.js"></script>
+	<script>
+		$(document).ready(function(){
+		  $('.modal-trigger').leanModal();
+
+		  $('input#input_text').characterCounter();
+
+		  $('.timepicker').pickatime({
+		      default: 'now',
+		      twelvehour: true,
+		      donetext: 'OK',
+		    autoclose: false,
+		    vibrate: true
+		  });
+
+		 
+		});
+		     
+	</script>
+</body>
+</html>
